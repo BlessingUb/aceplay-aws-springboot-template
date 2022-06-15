@@ -14,7 +14,7 @@ public class Playlist {
   private Long id;
 
   private String name;
-  private boolean cool;
+  private Boolean cool;
 
   
 
@@ -23,17 +23,14 @@ public class Playlist {
 
   public Playlist() {}
 
-  public Playlist(boolean cool) {
-    this.cool = cool;
+
+  public Playlist(String name, Boolean isCool) {
+    this(name, isCool, null);
   }
 
-  public Playlist(String name, boolean cool) {
-    this(name, cool, null);
-  }
-
-  public Playlist(String name, boolean cool,  Set<Track> tracks) {
+  public Playlist(String name, Boolean isCool,  Set<Track> tracks) {
     this.name = name;
-    this.cool = cool;
+    this.cool = isCool;
     this.tracks = tracks;
   }
 
